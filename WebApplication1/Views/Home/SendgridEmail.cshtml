@@ -1,0 +1,33 @@
+﻿@model Emailmodel
+@{
+    ViewData["Title"] = "SendgridEmail";
+}
+
+<h2>Sendgrid Email Api Inetegration</h2>
+<form asp-action="SendgridEmailSubmit" asp-controller="Home" method="post">
+    <table style="padding:20px;" >
+        <tr >
+            <td >From</td>
+            <td>  <input asp-for="From" /></td>
+            <td><br /></td>
+        </tr>
+        <tr>
+            <td>To</td>
+            <td>  <input asp-for="To" /></td>
+        </tr>
+        <tr>
+            <td>Subject</td>
+            <td>  <input asp-for="Subject"  /></td>
+        </tr>
+        <tr>
+            <td>
+                Body
+            </td>
+            <td>  <input asp-for="Body" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Send Email"/></td>
+        </tr>
+    </table>
+</form>
